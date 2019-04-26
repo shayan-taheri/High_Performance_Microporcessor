@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : InstBufRename
+Version: I-2013.12
+Date   : Sat Mar 15 20:45:31 2014
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: enclosed
+
+  Startpoint: flush_i (input port clocked by clk)
+  Endpoint: decodedPacket0_o_reg[46]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  InstBufRename      35000                 saed90nm_typ_ht
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0100     0.0100 f
+  flush_i (in)                           0.0000     0.0100 f
+  U511/QN (NOR3X0)                       0.3484     0.3584 r
+  U510/QN (NOR3X0)                       0.4956     0.8540 f
+  U526/Z (NBUFFX2)                       0.3491     1.2031 f
+  U563/Z (NBUFFX2)                       0.2905     1.4936 f
+  U426/Q (AO22X1)                        0.2445     1.7380 f
+  decodedPacket0_o_reg[46]/D (DFFX1)     0.0328     1.7708 f
+  data arrival time                                 1.7708
+
+  clock clk (rise edge)                100.0000   100.0000
+  clock network delay (ideal)            0.0000   100.0000
+  clock uncertainty                     -0.0100    99.9900
+  decodedPacket0_o_reg[46]/CLK (DFFX1)   0.0000    99.9900 r
+  library setup time                    -0.0762    99.9138
+  data required time                               99.9138
+  -----------------------------------------------------------
+  data required time                               99.9138
+  data arrival time                                -1.7708
+  -----------------------------------------------------------
+  slack (MET)                                      98.1430
+
+
+1

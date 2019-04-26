@@ -1,0 +1,154 @@
+$date
+    Mar 22, 2014  19:40:18
+$end
+$version
+    TOOL:	ncsim	10.20-s120
+$end
+$timescale
+    100 ps
+$end
+
+$scope module Dispatch $end
+$var wire      1 !    clk  $end
+$var wire      1 !    reset  $end
+$var wire      1 !    stall_i  $end
+$var wire      1 !    renameReady_i  $end
+$var wire      1 !    flagRecoverEX_i  $end
+$var wire      1 !    ctrlVerified_i  $end
+$var wire      2 "    ctrlVerifiedSMTid_i [1:0] $end
+$var wire     145 #    renamedPacket0_i [144:0] $end
+$var wire     145 $    renamedPacket1_i [144:0] $end
+$var wire     145 %    renamedPacket2_i [144:0] $end
+$var wire     145 &    renamedPacket3_i [144:0] $end
+$var wire      6 '    loadQueueCnt_i [5:0] $end
+$var wire      6 (    storeQueueCnt_i [5:0] $end
+$var wire      6 )    issueQueueCnt_i [5:0] $end
+$var wire      8 *    activeListCnt_i [7:0] $end
+$var wire     145 +    issueqPacket0_o [144:0] $end
+$var wire     145 ,    issueqPacket1_o [144:0] $end
+$var wire     145 -    issueqPacket2_o [144:0] $end
+$var wire     145 .    issueqPacket3_o [144:0] $end
+$var wire     55 /    alPacket0_o [54:0] $end
+$var wire     55 0    alPacket1_o [54:0] $end
+$var wire     55 1    alPacket2_o [54:0] $end
+$var wire     55 2    alPacket3_o [54:0] $end
+$var wire      6 3    lsqPacket0_o [5:0] $end
+$var wire      6 4    lsqPacket1_o [5:0] $end
+$var wire      6 5    lsqPacket2_o [5:0] $end
+$var wire      6 6    lsqPacket3_o [5:0] $end
+$var wire      4 7    updatedBranchMask0_o [3:0] $end
+$var wire      4 8    updatedBranchMask1_o [3:0] $end
+$var wire      4 9    updatedBranchMask2_o [3:0] $end
+$var wire      4 :    updatedBranchMask3_o [3:0] $end
+$var wire      1 ;    backEndReady_o  $end
+$var wire      1 <    stallfrontEnd_o  $end
+$var reg      145 =    dispatchPacket0 [144:0] $end
+$var reg      145 >    dispatchPacket1 [144:0] $end
+$var reg      145 ?    dispatchPacket2 [144:0] $end
+$var reg      145 @    dispatchPacket3 [144:0] $end
+$var reg      55 A    alPacket0 [54:0] $end
+$var reg      55 B    alPacket1 [54:0] $end
+$var reg      55 C    alPacket2 [54:0] $end
+$var reg      55 D    alPacket3 [54:0] $end
+$var reg       6 E    lsqPacket0 [5:0] $end
+$var reg       6 F    lsqPacket1 [5:0] $end
+$var reg       6 G    lsqPacket2 [5:0] $end
+$var reg       6 H    lsqPacket3 [5:0] $end
+$var reg       1 I    inst0Load  $end
+$var reg       1 J    inst0Store  $end
+$var reg       1 K    inst1Load  $end
+$var reg       1 L    inst1Store  $end
+$var reg       1 M    inst2Load  $end
+$var reg       1 N    inst2Store  $end
+$var reg       1 O    inst3Load  $end
+$var reg       1 P    inst3Store  $end
+$var reg       3 Q    loadCnt [2:0] $end
+$var reg       3 R    storeCnt [2:0] $end
+$var wire      1 S    stall0  $end
+$var wire      1 T    stall1  $end
+$var wire      1 U    stall2  $end
+$var wire      1 V    stall3  $end
+$var wire      1 W    stall4  $end
+$var reg       4 X    branch0mask [3:0] $end
+$var reg       4 Y    branch1mask [3:0] $end
+$var reg       4 Z    branch2mask [3:0] $end
+$var reg       4 [    branch3mask [3:0] $end
+
+$scope begin UPDATE_BRANCH_MASK $end
+$var integer  32 \    i  $end
+$var reg       4 ]    branch0mask_t [3:0] $end
+$var reg       4 ^    branch1mask_t [3:0] $end
+$var reg       4 _    branch2mask_t [3:0] $end
+$var reg       4 `    branch3mask_t [3:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+z!
+bz "
+bz #
+bz $
+bz %
+bz &
+bz '
+bz (
+bz )
+bz *
+bzxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz +
+bzxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz ,
+bzxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz -
+bzxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz .
+bxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz /
+bxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz 0
+bxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz 1
+bxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz 2
+bzxx 3
+bzxx 4
+bzxx 5
+bzxx 6
+bz 7
+bz 8
+bz 9
+bz :
+x;
+x<
+bzxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz =
+bzxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz >
+bzxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz ?
+bzxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz @
+bxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz A
+bxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz B
+bxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz C
+bxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz D
+bzxx E
+bzxx F
+bzxx G
+bzxx H
+xI
+xJ
+xK
+xL
+xM
+xN
+xO
+xP
+bx Q
+bx R
+xS
+xT
+xU
+xV
+xW
+bz X
+bz Y
+bz Z
+bz [
+b100 \
+bz ]
+bz ^
+bz _
+bz `
+$end
+#0

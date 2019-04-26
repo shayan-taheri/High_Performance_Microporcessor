@@ -1,0 +1,57 @@
+Loading db file '/home/shayan/Desktop/dc/scripts/saed90nm_typ_ht.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : WriteBack
+Version: I-2013.12
+Date   : Sat Mar 15 22:32:58 2014
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_typ_ht (File: /home/shayan/Desktop/dc/scripts/saed90nm_typ_ht.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+WriteBack              16000             saed90nm_typ_ht
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   3.7883 uW   (76%)
+  Net Switching Power  =   1.2031 uW   (24%)
+                         ---------
+Total Dynamic Power    =   4.9914 uW  (100%)
+
+Cell Leakage Power     = 180.3801 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           1.4340            0.2239        1.1787e+08          119.5307  (  64.48%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      2.3543            0.9792        6.2507e+07           65.8405  (  35.52%)
+--------------------------------------------------------------------------------------------------
+Total              3.7883 uW         1.2031 uW     1.8038e+08 pW       185.3712 uW
+1

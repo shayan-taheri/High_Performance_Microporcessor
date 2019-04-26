@@ -1,0 +1,176 @@
+$date
+    Mar 22, 2014  19:30:58
+$end
+$version
+    TOOL:	ncsim	10.20-s120
+$end
+$timescale
+    100 ps
+$end
+
+$scope module InstructionBuffer $end
+$var wire      1 !    clk  $end
+$var wire      1 !    reset  $end
+$var wire      1 !    flush_i  $end
+$var wire      1 !    stall_i  $end
+$var wire      1 !    decodeReady_i  $end
+$var wire      8 "    decodedVector_i [7:0] $end
+$var wire     126 #    decodedPacket0_i [125:0] $end
+$var wire     126 $    decodedPacket1_i [125:0] $end
+$var wire     126 %    decodedPacket2_i [125:0] $end
+$var wire     126 &    decodedPacket3_i [125:0] $end
+$var wire     126 '    decodedPacket4_i [125:0] $end
+$var wire     126 (    decodedPacket5_i [125:0] $end
+$var wire     126 )    decodedPacket6_i [125:0] $end
+$var wire     126 *    decodedPacket7_i [125:0] $end
+$var wire      1 +    stallFetch_o  $end
+$var wire      1 ,    instBufferReady_o  $end
+$var wire     126 -    decodedPacket0_o [125:0] $end
+$var wire     126 .    decodedPacket1_o [125:0] $end
+$var wire     126 /    decodedPacket2_o [125:0] $end
+$var wire     126 0    decodedPacket3_o [125:0] $end
+$var wire      3 1    branchCount_o [2:0] $end
+$var reg       4 2    headPtr [3:0] $end
+$var reg       4 3    tailPtr [3:0] $end
+$var reg       5 4    instCount [4:0] $end
+$var integer  32 5    i  $end
+$var reg       5 6    instcnt_f [4:0] $end
+$var wire      4 7    readAddr0 [3:0] $end
+$var wire      4 8    readAddr1 [3:0] $end
+$var wire      4 9    readAddr2 [3:0] $end
+$var wire      4 :    readAddr3 [3:0] $end
+$var wire      4 ;    writeAddr0 [3:0] $end
+$var wire      4 <    writeAddr1 [3:0] $end
+$var wire      4 =    writeAddr2 [3:0] $end
+$var wire      4 >    writeAddr3 [3:0] $end
+$var wire      4 ?    writeAddr4 [3:0] $end
+$var wire      4 @    writeAddr5 [3:0] $end
+$var wire      4 A    writeAddr6 [3:0] $end
+$var wire      4 B    writeAddr7 [3:0] $end
+$var wire      1 C    writeEnable0  $end
+$var wire      1 D    writeEnable1  $end
+$var wire      1 E    writeEnable2  $end
+$var wire      1 F    writeEnable3  $end
+$var wire      1 G    writeEnable4  $end
+$var wire      1 H    writeEnable5  $end
+$var wire      1 I    writeEnable6  $end
+$var wire      1 J    writeEnable7  $end
+$var wire      1 K    stallFetch  $end
+$var wire     126 L    decodedPacket0 [125:0] $end
+$var wire     126 M    decodedPacket1 [125:0] $end
+$var wire     126 N    decodedPacket2 [125:0] $end
+$var wire     126 O    decodedPacket3 [125:0] $end
+$var wire      1 P    inst0Branch  $end
+$var wire      1 Q    inst1Branch  $end
+$var wire      1 R    inst2Branch  $end
+$var wire      1 S    inst3Branch  $end
+
+$scope module instBuffer $end
+$var parameter 32 T    SRAM_DEPTH  $end
+$var parameter 32 U    SRAM_INDEX  $end
+$var parameter 32 V    SRAM_WIDTH  $end
+$var wire      1 !    clk  $end
+$var wire      1 W    reset  $end
+$var wire      4 7    addr0_i [3:0] $end
+$var wire      4 8    addr1_i [3:0] $end
+$var wire      4 9    addr2_i [3:0] $end
+$var wire      4 :    addr3_i [3:0] $end
+$var wire      4 ;    addr0wr_i [3:0] $end
+$var wire      4 <    addr1wr_i [3:0] $end
+$var wire      4 =    addr2wr_i [3:0] $end
+$var wire      4 >    addr3wr_i [3:0] $end
+$var wire      4 ?    addr4wr_i [3:0] $end
+$var wire      4 @    addr5wr_i [3:0] $end
+$var wire      4 A    addr6wr_i [3:0] $end
+$var wire      4 B    addr7wr_i [3:0] $end
+$var wire      1 C    we0_i  $end
+$var wire      1 D    we1_i  $end
+$var wire      1 E    we2_i  $end
+$var wire      1 F    we3_i  $end
+$var wire      1 G    we4_i  $end
+$var wire      1 H    we5_i  $end
+$var wire      1 I    we6_i  $end
+$var wire      1 J    we7_i  $end
+$var wire     126 #    data0wr_i [125:0] $end
+$var wire     126 $    data1wr_i [125:0] $end
+$var wire     126 %    data2wr_i [125:0] $end
+$var wire     126 &    data3wr_i [125:0] $end
+$var wire     126 '    data4wr_i [125:0] $end
+$var wire     126 (    data5wr_i [125:0] $end
+$var wire     126 )    data6wr_i [125:0] $end
+$var wire     126 *    data7wr_i [125:0] $end
+$var wire     126 L    data0_o [125:0] $end
+$var wire     126 M    data1_o [125:0] $end
+$var wire     126 N    data2_o [125:0] $end
+$var wire     126 O    data3_o [125:0] $end
+$var integer  32 X    i  $end
+$upscope $end
+
+
+$scope begin UPDATE_INST_COUNT $end
+$var reg       5 Y    instcnt_1 [4:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b1111110 V
+b100 U
+b10000 T
+z!
+bz "
+bz #
+bz $
+bz %
+bz &
+bz '
+bz (
+bz )
+bz *
+x+
+x,
+bx -
+bx .
+bx /
+bx 0
+bx 1
+bx 2
+bx 3
+bx 4
+bx 5
+bx 6
+bx 7
+bx 8
+bx 9
+bx :
+bx ;
+bx <
+bx =
+bx >
+bx ?
+bx @
+bx A
+bx B
+xC
+xD
+xE
+xF
+xG
+xH
+xI
+xJ
+xK
+bx L
+bx M
+bx N
+bx O
+xP
+xQ
+xR
+xS
+xW
+bx X
+bx Y
+$end
+#0

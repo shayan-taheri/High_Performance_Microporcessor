@@ -1,0 +1,108 @@
+Loading db file '/opt/software/synopsys/synthesis/libraries/syn/gtech.db'
+Loading db file '/opt/software/synopsys/synthesis/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Loading verilog files: '/home/shayan/Desktop/dc/source/Core-1/FabScalarParam.v' '/home/shayan/Desktop/dc/source/Core-1/ISA/SimpleScalar_ISA.v' '/home/shayan/Desktop/dc/source/Core-1/writeback/WriteBack.v' 
+Running PRESTO HDLC
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Compiling source file /home/shayan/Desktop/dc/source/Core-1/FabScalarParam.v
+Compiling source file /home/shayan/Desktop/dc/source/Core-1/ISA/SimpleScalar_ISA.v
+Compiling source file /home/shayan/Desktop/dc/source/Core-1/writeback/WriteBack.v
+
+Inferred memory devices in process
+	in routine WriteBack line 279 in file
+		'/home/shayan/Desktop/dc/source/Core-1/writeback/WriteBack.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|  exePacketValid1_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  lsuPacketValid0_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    lsuPacket0_reg     | Flip-flop |  63   |  Y  | N  | N  | N  | N  | N  | N  |
+|  exePacketValid2_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    exePacket2_reg     | Flip-flop |  97   |  Y  | N  | N  | N  | N  | N  | N  |
+| ldViolationPacket_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|    exePacket0_reg     | Flip-flop |  60   |  Y  | N  | N  | N  | N  | N  | N  |
+|  exePacketValid0_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    exePacket1_reg     | Flip-flop |  60   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|  WriteBack/191   |   4    |    4    |      2       | N  |
+===========================================================
+Presto compilation completed successfully.
+Current design is now '/home/shayan/Desktop/dc/source/Core-1/writeback/WriteBack.db:WriteBack'
+Loaded 1 design.
+Current design is 'WriteBack'.
+Running PRESTO HDLC
+Searching for ./FabScalarParam.v
+Searching for /opt/software/synopsys/synthesis/libraries/syn/FabScalarParam.v
+Searching for /opt/software/synopsys/synthesis/minpower/syn/FabScalarParam.v
+Searching for /opt/software/synopsys/synthesis/dw/syn_ver/FabScalarParam.v
+Searching for /opt/software/synopsys/synthesis/dw/sim_ver/FabScalarParam.v
+Searching for ../source/Core-1/FabScalarParam.v
+Searching for ./SimpleScalar_ISA.v
+Searching for /opt/software/synopsys/synthesis/libraries/syn/SimpleScalar_ISA.v
+Searching for /opt/software/synopsys/synthesis/minpower/syn/SimpleScalar_ISA.v
+Searching for /opt/software/synopsys/synthesis/dw/syn_ver/SimpleScalar_ISA.v
+Searching for /opt/software/synopsys/synthesis/dw/sim_ver/SimpleScalar_ISA.v
+Searching for ../source/Core-1/SimpleScalar_ISA.v
+Searching for ../source/Core-1/fetch/SimpleScalar_ISA.v
+Searching for ../source/Core-1/decode/SimpleScalar_ISA.v
+Searching for ../source/Core-1/rename/SimpleScalar_ISA.v
+Searching for ../source/Core-1/dispatch/SimpleScalar_ISA.v
+Searching for ../source/Core-1/issue/SimpleScalar_ISA.v
+Searching for ../source/Core-1/execute/SimpleScalar_ISA.v
+Searching for ../source/Core-1/writeback/SimpleScalar_ISA.v
+Searching for ../source/Core-1/memory/SimpleScalar_ISA.v
+Searching for ../source/Core-1/retire/SimpleScalar_ISA.v
+Searching for ../source/Core-1/pmems/SimpleScalar_ISA.v
+Searching for ../source/Core-1/ISA/SimpleScalar_ISA.v
+Searching for ./WriteBack.v
+Searching for /opt/software/synopsys/synthesis/libraries/syn/WriteBack.v
+Searching for /opt/software/synopsys/synthesis/minpower/syn/WriteBack.v
+Searching for /opt/software/synopsys/synthesis/dw/syn_ver/WriteBack.v
+Searching for /opt/software/synopsys/synthesis/dw/sim_ver/WriteBack.v
+Searching for ../source/Core-1/WriteBack.v
+Searching for ../source/Core-1/fetch/WriteBack.v
+Searching for ../source/Core-1/decode/WriteBack.v
+Searching for ../source/Core-1/rename/WriteBack.v
+Searching for ../source/Core-1/dispatch/WriteBack.v
+Searching for ../source/Core-1/issue/WriteBack.v
+Searching for ../source/Core-1/execute/WriteBack.v
+Searching for ../source/Core-1/writeback/WriteBack.v
+Compiling source file ../source/Core-1/FabScalarParam.v
+Compiling source file ../source/Core-1/ISA/SimpleScalar_ISA.v
+Compiling source file ../source/Core-1/writeback/WriteBack.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine WriteBack line 279 in file
+		'../source/Core-1/writeback/WriteBack.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|  exePacketValid1_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  lsuPacketValid0_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    lsuPacket0_reg     | Flip-flop |  63   |  Y  | N  | N  | N  | N  | N  | N  |
+|  exePacketValid2_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    exePacket2_reg     | Flip-flop |  97   |  Y  | N  | N  | N  | N  | N  | N  |
+| ldViolationPacket_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|    exePacket0_reg     | Flip-flop |  60   |  Y  | N  | N  | N  | N  | N  | N  |
+|  exePacketValid0_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    exePacket1_reg     | Flip-flop |  60   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|  WriteBack/191   |   4    |    4    |      2       | N  |
+===========================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'WriteBack'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+1

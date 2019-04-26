@@ -1,0 +1,45 @@
+$date
+    Mar 22, 2014  19:32:08
+$end
+$version
+    TOOL:	ncsim	10.20-s120
+$end
+$timescale
+    100 ps
+$end
+
+$scope module InstBufRename $end
+$var wire      1 !    reset  $end
+$var wire      1 !    clk  $end
+$var wire      1 !    flush_i  $end
+$var wire      1 !    stall_i  $end
+$var wire      1 !    instBufferReady_i  $end
+$var wire     126 "    decodedPacket0_i [125:0] $end
+$var wire     126 #    decodedPacket1_i [125:0] $end
+$var wire     126 $    decodedPacket2_i [125:0] $end
+$var wire     126 %    decodedPacket3_i [125:0] $end
+$var wire      3 &    branchCount_i [2:0] $end
+$var reg       1 '    instBufferReady_o  $end
+$var reg      126 (    decodedPacket0_o [125:0] $end
+$var reg      126 )    decodedPacket1_o [125:0] $end
+$var reg      126 *    decodedPacket2_o [125:0] $end
+$var reg      126 +    decodedPacket3_o [125:0] $end
+$var reg       3 ,    branchCount_o [2:0] $end
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+z!
+bz "
+bz #
+bz $
+bz %
+bz &
+x'
+bx (
+bx )
+bx *
+bx +
+bx ,
+$end
+#0

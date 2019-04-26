@@ -1,0 +1,193 @@
+$date
+    Mar 22, 2014  19:59:12
+$end
+$version
+    TOOL:	ncsim	10.20-s120
+$end
+$timescale
+    100 ps
+$end
+
+$scope module WriteBack $end
+$var wire      1 !    exePacketValid0_i  $end
+$var wire     107 "    exePacket0_i [106:0] $end
+$var wire      1 #    writebkValid0_o  $end
+$var wire     15 $    ctrlFU0_o [14:0] $end
+$var wire      1 %    bypassValid0_o  $end
+$var wire     42 &    bypassPacket0_o [41:0] $end
+$var wire     32 '    computedAddr0_o [31:0] $end
+$var wire      1 !    exePacketValid1_i  $end
+$var wire     107 (    exePacket1_i [106:0] $end
+$var wire      1 )    writebkValid1_o  $end
+$var wire     15 *    ctrlFU1_o [14:0] $end
+$var wire      1 +    bypassValid1_o  $end
+$var wire     42 ,    bypassPacket1_o [41:0] $end
+$var wire     32 -    computedAddr1_o [31:0] $end
+$var wire      1 !    exePacketValid2_i  $end
+$var wire     107 .    exePacket2_i [106:0] $end
+$var wire      1 /    writebkValid2_o  $end
+$var wire     15 0    ctrlFU2_o [14:0] $end
+$var wire      1 1    bypassValid2_o  $end
+$var wire     42 2    bypassPacket2_o [41:0] $end
+$var wire     32 3    computedAddr2_o [31:0] $end
+$var wire      1 !    exePacketValid3_i  $end
+$var wire     109 4    exePacket3_i [108:0] $end
+$var wire      1 5    writebkValid3_o  $end
+$var wire     15 6    ctrlFU3_o [14:0] $end
+$var wire      1 7    bypassValid3_o  $end
+$var wire     42 8    bypassPacket3_o [41:0] $end
+$var wire     32 9    computedAddr3_o [31:0] $end
+$var wire      1 !    lsuPacketValid0_i  $end
+$var wire     63 :    lsuPacket0_i [62:0] $end
+$var wire      8 ;    ldViolationPacket_i [7:0] $end
+$var wire      1 <    agenIqFreedValid0_o  $end
+$var wire      5 =    agenIqEntry0_o [4:0] $end
+$var wire      1 >    ctrlVerified_o  $end
+$var wire      1 ?    ctrlMispredict_o  $end
+$var wire      1 @    ctrlConditional_o  $end
+$var wire      2 A    ctrlSMTid_o [1:0] $end
+$var wire     32 B    ctrlTargetAddr_o [31:0] $end
+$var wire      1 C    ctrlBrDirection_o  $end
+$var wire      4 D    ctrlCtiQueueIndex_o [3:0] $end
+$var wire      8 E    ldViolationPacket_o [7:0] $end
+$var wire      1 !    clk  $end
+$var wire      1 !    reset  $end
+$var reg      107 F    exePacket0 [106:0] $end
+$var reg       1 G    exePacketValid0  $end
+$var wire      8 H    exePacket0Flags [7:0] $end
+$var reg       1 I    invalidateFu0Packet  $end
+$var reg      107 J    exePacket1 [106:0] $end
+$var reg       1 K    exePacketValid1  $end
+$var wire      8 L    exePacket1Flags [7:0] $end
+$var reg       1 M    invalidateFu1Packet  $end
+$var reg      107 N    exePacket2 [106:0] $end
+$var reg       1 O    exePacketValid2  $end
+$var wire      8 P    exePacket2Flags [7:0] $end
+$var reg       1 Q    invalidateFu2Packet  $end
+$var reg      107 R    exePacket3 [106:0] $end
+$var reg       1 S    exePacketValid3  $end
+$var wire      8 T    lsuPacket0Flags [7:0] $end
+$var reg       1 U    invalidateLsuPacket  $end
+$var reg       1 V    invalidatelsuPacket  $end
+$var wire      1 W    ctrlVerified  $end
+$var wire      1 X    ctrlMispredict  $end
+$var wire      1 Y    ctrlConditional  $end
+$var wire      2 Z    ctrlSMTid [1:0] $end
+$var wire     32 [    ctrlTargetAddr [31:0] $end
+$var wire      1 \    ctrlBrDirection  $end
+$var wire      4 ]    ctrlCtiQueueIndex [3:0] $end
+$var reg       1 ^    lsuPacketValid0  $end
+$var reg      63 _    lsuPacket0 [62:0] $end
+$var reg       8 `    ldViolationPacket [7:0] $end
+$var reg       8 a    ldViolationPacket_l1 [7:0] $end
+$var reg       8 b    ldViolationPacket_l2 [7:0] $end
+$var reg       8 c    ldViolationPacket_l3 [7:0] $end
+$var reg       1 d    writebkValid0_l0  $end
+$var reg      15 e    ctrlFU0_l0 [14:0] $end
+$var reg      32 f    computedAddr0_l0 [31:0] $end
+$var reg       1 g    writebkValid1_l0  $end
+$var reg      15 h    ctrlFU1_l0 [14:0] $end
+$var reg      32 i    computedAddr1_l0 [31:0] $end
+$var reg       1 j    writebkValid2_l0  $end
+$var reg      15 k    ctrlFU2_l0 [14:0] $end
+$var reg      32 l    computedAddr2_l0 [31:0] $end
+$var reg       1 m    writebkValid3_l0  $end
+$var reg      15 n    ctrlFU3_l0 [14:0] $end
+$var reg      32 o    computedAddr3_l0 [31:0] $end
+
+$scope begin INVALIDATE_WB_ON_MISPREDICT $end
+$var reg       4 p    fu0BranchMask [3:0] $end
+$var reg       4 q    fu1BranchMask [3:0] $end
+$var reg       4 r    fu2BranchMask [3:0] $end
+$var reg       4 s    lsuBranchMask [3:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+z!
+bz "
+x#
+bx $
+x%
+bx0 &
+b0 '
+bz (
+x)
+bx *
+x+
+bx0 ,
+b0 -
+bz .
+x/
+bx 0
+x1
+bx0 2
+bx 3
+bz 4
+x5
+bx 6
+x7
+bx000 8
+b0 9
+bz :
+bz ;
+x<
+bx =
+x>
+0?
+x@
+bx A
+bx B
+xC
+bx D
+bx E
+bx F
+xG
+bx H
+0I
+bx J
+xK
+bx L
+0M
+bx N
+xO
+bx P
+0Q
+bx R
+xS
+bx T
+0U
+xV
+xW
+0X
+xY
+bx Z
+bx [
+x\
+bx ]
+x^
+bx _
+bx `
+bx a
+bx b
+bx c
+xd
+bx e
+bx f
+xg
+bx h
+bx i
+xj
+bx k
+bx l
+xm
+bx n
+bx o
+bx p
+bx q
+bx r
+bx s
+$end
+#0

@@ -1,0 +1,9 @@
+
+  Linking design 'WriteBack'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  saed90nm_typ_ht (library)   /home/shayan/Desktop/dc/scripts/saed90nm_typ_ht.db
+  dw_foundation.sldb (library)
+                              /home/shayan/Desktop/dc/scripts/dw_foundation.sldb
+
+1

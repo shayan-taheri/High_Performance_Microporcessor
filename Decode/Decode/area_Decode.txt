@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : Decode
+Version: I-2013.12
+Date   : Sat Mar 15 20:02:15 2014
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ_ht (File: /users/manzi/Desktop/FabScalar/dc/dc/scripts/saed90nm_typ_ht.db)
+
+Number of ports:                         1556
+Number of nets:                          8411
+Number of cells:                         7081
+Number of combinational cells:           6101
+Number of sequential cells:               976
+Number of macros/black boxes:               0
+Number of buf/inv:                       1228
+Number of references:                      24
+
+Combinational area:              72011.060372
+Buf/Inv area:                    10962.432283
+Noncombinational area:           21587.558960
+Macro/Black Box area:                0.000000
+Net Interconnect area:           12743.333406
+
+Total cell area:                 93598.619332
+Total area:                     106341.952738
+1

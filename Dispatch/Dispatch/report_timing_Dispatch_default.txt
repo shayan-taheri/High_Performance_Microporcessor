@@ -1,0 +1,62 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Dispatch
+Version: I-2013.12
+Date   : Tue Mar 18 01:36:32 2014
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: enclosed
+
+  Startpoint: renamedPacket1_i[136]
+              (input port clocked by clk)
+  Endpoint: backEndReady_o
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Dispatch           16000                 saed90nm_typ_ht
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.0100     0.0100 r
+  renamedPacket1_i[136] (in)             0.0000     0.0100 r
+  U1516/Q (XOR2X1)                       0.2170     0.2270 f
+  U1515/Q (XOR2X1)                       0.2252     0.4522 f
+  U1410/QN (NAND2X1)                     0.1151     0.5673 r
+  U1512/Q (XNOR2X1)                      0.2569     0.8242 f
+  add_288/U1_1/CO (FADDX1)               0.3939     1.2181 f
+  add_288/U1_2/CO (FADDX1)               0.3138     1.5320 f
+  U1481/Q (AND2X1)                       0.1510     1.6830 f
+  U1479/Q (AND2X1)                       0.1466     1.8296 f
+  U1477/Q (AND2X1)                       0.1427     1.9723 f
+  U1493/Q (OR3X1)                        0.1661     2.1383 f
+  U1494/Q (OR4X1)                        0.2342     2.3725 f
+  U1495/Q (OA21X1)                       0.1375     2.5101 f
+  U49/Q (OR4X1)                          0.2000     2.7101 f
+  U1411/QN (NOR2X0)                      0.1061     2.8162 r
+  U48/Q (AND2X1)                         0.1199     2.9361 r
+  backEndReady_o (out)                   0.0002     2.9362 r
+  data arrival time                                 2.9362
+
+  clock clk (rise edge)                100.0000   100.0000
+  clock network delay (ideal)            0.0000   100.0000
+  clock uncertainty                     -0.0100    99.9900
+  output external delay                 -0.0150    99.9750
+  data required time                               99.9750
+  -----------------------------------------------------------
+  data required time                               99.9750
+  data arrival time                                -2.9362
+  -----------------------------------------------------------
+  slack (MET)                                      97.0388
+
+
+1

@@ -1,0 +1,88 @@
+Information: Building the design 'SRAM_8R8W' instantiated from design 'InstructionBuffer' with
+	the parameters "16,4,126". (HDL-193)
+Warning: Cannot find the design 'SRAM_8R8W' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'SRAM_8R8W' in 'InstructionBuffer'. (LINK-5)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : InstructionBuffer
+Version: I-2013.12
+Date   : Sat Mar 15 20:41:32 2014
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:            14.0000
+  Critical Path Length:        3.0273
+  Critical Path Slack:        96.8442
+  Critical Path Clk Period:  100.0000
+  Total Negative Slack:        0.0000
+  No. of Violating Paths:      0.0000
+  Worst Hold Violation:        0.0000
+  Total Hold Violation:        0.0000
+  No. of Hold Violations:      0.0000
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:                164
+  Buf/Inv Cell Count:               8
+  Buf Cell Count:                   0
+  Inv Cell Count:                   8
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:       151
+  Sequential Cell Count:           13
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:       2259.7632
+  Noncombinational Area:     323.4816
+  Buf/Inv Area:               44.2368
+  Total Buffer Area:           0.0000
+  Total Inverter Area:        44.2368
+  Macro/Black Box Area:        0.0000
+  Net Area:                  286.6469
+  -----------------------------------
+  Cell Area:                2583.2448
+  Design Area:              2869.8917
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          1762
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: vlsi-34.engr.usu.edu
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                  0.4719
+  Logic Optimization:                0.2250
+  Mapping Optimization:              0.1620
+  -----------------------------------------
+  Overall Compile Time:              1.5158
+  Overall Compile Wall Clock Time:   1.8691
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

@@ -1,0 +1,84 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Decode
+Version: I-2013.12
+Date   : Sat Mar 15 20:02:15 2014
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: enclosed
+
+  Startpoint: inst0Packet_i[104]
+              (input port clocked by clk)
+  Endpoint: decodedVector_o[1]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Decode             140000                saed90nm_typ_ht
+  Decode_PISA_0      8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  0.0100     0.0100 f
+  inst0Packet_i[104] (in)                               0.0000     0.0100 f
+  decode0_PISA/instPacket_i[104] (Decode_PISA_0)        0.0000     0.0100 f
+  decode0_PISA/U382/QN (NOR2X0)                         1.0262     1.0362 r
+  decode0_PISA/U327/QN (NAND3X0)                        0.1509     1.1871 f
+  decode0_PISA/U157/ZN (INVX0)                          0.1468     1.3339 r
+  decode0_PISA/U116/QN (NAND2X1)                        0.1357     1.4696 f
+  decode0_PISA/U283/Q (OA21X1)                          0.1642     1.6338 f
+  decode0_PISA/U282/QN (NAND3X0)                        0.1493     1.7831 r
+  decode0_PISA/U99/ZN (INVX0)                           0.0994     1.8825 f
+  decode0_PISA/U281/Q (AND2X1)                          0.1515     2.0340 f
+  decode0_PISA/U98/QN (NOR2X0)                          0.1891     2.2231 r
+  decode0_PISA/U92/Z (NBUFFX2)                          0.2111     2.4342 r
+  decode0_PISA/U194/Q (AND2X1)                          0.6699     3.1041 r
+  decode0_PISA/decodedPacket1Valid_o (Decode_PISA_0)    0.0000     3.1041 r
+  U6763/QN (NAND2X1)                                    0.8562     3.9603 f
+  U6619/ZN (INVX0)                                      0.7885     4.7488 r
+  U8097/ZN (INVX0)                                      1.6601     6.4089 f
+  U2875/Q (OA21X1)                                      2.2416     8.6506 f
+  U6620/ZN (INVX0)                                      0.5057     9.1563 r
+  U8280/Q (AND2X1)                                      0.5537     9.7100 r
+  U8279/Q (XOR2X1)                                      1.0501    10.7601 r
+  U8275/Q (XOR2X1)                                      1.4274    12.1875 r
+  U8271/Q (XOR2X1)                                      1.4176    13.6052 r
+  U8267/Q (XOR2X1)                                      1.4259    15.0310 r
+  U8250/Q (AND2X1)                                      0.7411    15.7721 r
+  U8248/Q (AND2X1)                                      0.5174    16.2895 r
+  U8246/Q (AND2X1)                                      0.5171    16.8066 r
+  U8244/Q (AND2X1)                                      0.5209    17.3275 r
+  U8243/Q (XOR2X1)                                      1.0298    18.3573 f
+  U5858/QN (NOR3X0)                                     0.6164    18.9737 r
+  U5924/QN (NAND2X1)                                    0.6077    19.5814 f
+  U6305/QN (NOR2X0)                                     0.5793    20.1607 r
+  U1981/QN (NAND4X0)                                    0.8215    20.9822 f
+  U6621/Z (NBUFFX2)                                     1.6209    22.6031 f
+  U8201/ZN (INVX0)                                      1.2516    23.8547 r
+  U6378/QN (NOR4X0)                                     2.5357    26.3904 f
+  U1979/QN (NAND4X0)                                    0.8056    27.1960 r
+  decodedVector_o[1] (out)                              0.0038    27.1998 r
+  data arrival time                                               27.1998
+
+  clock clk (rise edge)                               100.0000   100.0000
+  clock network delay (ideal)                           0.0000   100.0000
+  clock uncertainty                                    -0.0100    99.9900
+  output external delay                                -0.0150    99.9750
+  data required time                                              99.9750
+  --------------------------------------------------------------------------
+  data required time                                              99.9750
+  data arrival time                                              -27.1998
+  --------------------------------------------------------------------------
+  slack (MET)                                                     72.7752
+
+
+1

@@ -1,0 +1,55 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Dispatch
+Version: I-2013.12
+Date   : Tue Mar 18 01:36:33 2014
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_typ_ht (File: /users/manzi/Desktop/FabScalar/dc/dc/scripts/saed90nm_typ_ht.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Dispatch               16000             saed90nm_typ_ht
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   4.4952 uW   (75%)
+  Net Switching Power  =   1.5369 uW   (25%)
+                         ---------
+Total Dynamic Power    =   6.0321 uW  (100%)
+
+Cell Leakage Power     =  84.6138 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      4.4952            1.5369        8.4613e+07           90.6455  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total              4.4952 uW         1.5369 uW     8.4613e+07 pW        90.6455 uW
+1

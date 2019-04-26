@@ -1,0 +1,33 @@
+Warning: Design 'InstructionBuffer' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : InstructionBuffer
+Version: I-2013.12
+Date   : Sat Mar 15 20:41:32 2014
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ_ht (File: /users/manzi/Desktop/FabScalar/dc/dc/scripts/saed90nm_typ_ht.db)
+
+Number of ports:                         1530
+Number of nets:                          1762
+Number of cells:                          164
+Number of combinational cells:            150
+Number of sequential cells:                14
+Number of macros/black boxes:               0
+Number of buf/inv:                          8
+Number of references:                      17
+
+Combinational area:               2259.763187
+Buf/Inv area:                       44.236801
+Noncombinational area:             323.481596
+Macro/Black Box area:                0.000000
+Net Interconnect area:             286.646950
+
+Total cell area:                  2583.244783
+Total area:                       2869.891733
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
