@@ -1,0 +1,126 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww26960\viewh15740\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 /////////////////////////////////////////////////////////////////////\
+// Engineer: Shayan Taheri                                       ///\
+// Create Date:    10:06:16 03/28/2014                          ///\
+// Module Name:    single precision floating-point multiplier  ///\
+/////////////////////////////////////////////////////////////////\
+\
+struct float_ieee \{\
+	bool sign;\
+	bool exponent [8];\
+	bool mantissa [23];\
+\}\
+\
+? float_multiply (float_ieee IN1, float_ieee IN2) \{\
+\
+	float_ieee OUT;\
+	bool exp_check [8] = "00000000";\
+	bool mant_check [23] = "00000000000000000000000";\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	bool wireAdd [8];\
+	bool wireMulX1 [24];\
+	bool wireMulX2 [24];\
+	wireMulRES [48];\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	if ((IN1.exponent == exp_check && IN1.mantissa == mant_check) || (IN2.exponent == exp_check && IN2.mantissa == mant_check)) \{\
+		OUT.sign = 0;\
+		OUT.exponent = exp_check;\
+		OUT.mantissa = mant_check;\
+	\}\
+	else \{\
+		OUT.sign = IN1.sign ^ IN2.sign;\
+		wireAdd = IN1.exponent + IN2.exponent;\
+		wireMulX1 [23] = 1;\
+		wireMulX2 [\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 		wireMulX1 = \{1'b1,X1[22:0]\};\
+		wireMulX2 = \{1'b1,X2[22:0]\};\
+		wireMulRES = wireMulX1 * wireMulX2;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+\
+wire [7:0] wireAdd;\
+wire [23:0] wireMulX1;\
+wire [23:0] wireMulX2;\
+wire [47:0] wireMulRES;\
+\
+wire [45:0] resx_test1, resx_test2, resx_test3, resx_org, diffx1, diffx2, diffx3, diffx1_out, diffx2_out, diffx3_out;\
+wire [45:0] resy_test1, resy_test2, resy_test3, resy_org, diffy1, diffy2, diffy3, diffy1_out, diffy2_out, diffy3_out;\
+\
+\
+        \
+            if (wireMulRES [47] == 1) begin\
+            \
+                Y[30:23] = wireAdd - 'd127 + 'd1;\
+                if (diffx1_out <= diffx2_out && diffx1_out <= diffx3_out)\
+                    Y[22:0] = wireMulRES[46:25]+1;\
+                else if (diffx2_out <= diffx1_out && diffx2_out <= diffx3_out)\
+                    Y[22:0] = wireMulRES[46:25]-1;\
+                else if (diffx3_out <= diffx1_out && diffx3_out <= diffx2_out)\
+                        Y[22:0] = wireMulRES[46:25];\
+\
+            end\
+\
+            else begin\
+            \
+                Y[30:23] = wireAdd - 'd127;\
+                if (diffy1_out <= diffy2_out && diffy1_out <= diffy3_out)\
+                    Y[22:0] = wireMulRES[45:24]+1;\
+                else if (diffy2_out <= diffy1_out && diffy2_out <= diffy3_out)\
+                    Y[22:0] = wireMulRES[45:24]-1;\
+                else if (diffy3_out <= diffy1_out && diffy3_out <= diffy2_out)\
+                    Y[22:0] = wireMulRES[45:24];\
+\
+            end\
+\
+        end\
+    \
+        stg <= 'd0;\
+    \
+    end\
+\
+end\
+\
+\
+assign wireAdd = X1[30:23] + X2[30:23];\
+assign wireMulX1 = \{1'b1,X1[22:0]\};\
+assign wireMulX2 = \{1'b1,X2[22:0]\};\
+assign wireMulRES = wireMulX1 * wireMulX2;\
+\
+\
+assign resx_test1 = \{wireMulRES[46:25]+1, 24'b0\};\
+assign resx_test2 = \{wireMulRES[46:25]-1, 24'b0\};\
+assign resx_test3 = \{wireMulRES[46:25], 24'b0\};\
+assign resx_org = wireMulRES[46:1];\
+assign diffx1 = resx_org - resx_test1;\
+assign diffx2 = resx_org - resx_test2;\
+assign diffx3 = resx_org - resx_test3;\
+assign diffx1_out = (diffx1[45] == 1) ? ((~diffx1) + 1) : (diffx1);\
+assign diffx2_out = (diffx2[45] == 1) ? ((~diffx2) + 1) : (diffx2);\
+assign diffx3_out = (diffx3[45] == 1) ? ((~diffx3) + 1) : (diffx3);\
+\
+\
+assign resy_test1 = \{wireMulRES[45:24]+1, 24'b0\};\
+assign resy_test2 = \{wireMulRES[45:24]-1, 24'b0\};\
+assign resy_test3 = \{wireMulRES[45:24], 24'b0\};\
+assign resy_org = wireMulRES[45:0];\
+assign diffy1 = resy_org - resy_test1;\
+assign diffy2 = resy_org - resy_test2;\
+assign diffy3 = resy_org - resy_test3;\
+assign diffy1_out = (diffy1[45] == 1) ? ((~diffy1) + 1) : (diffy1);\
+assign diffy2_out = (diffy2[45] == 1) ? ((~diffy2) + 1) : (diffy2);\
+assign diffy3_out = (diffy3[45] == 1) ? ((~diffy3) + 1) : (diffy3);\
+\
+\
+assign OUT = Y;\
+\
+endmodule\
+\
+}

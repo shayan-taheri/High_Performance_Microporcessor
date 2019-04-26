@@ -1,0 +1,7 @@
+vcs -R -I \
+	../src/hdl/tb/tb.v \
+	../src/hdl/rtl/mac.v \
+	+define+RTLSAIF+RTLVCD
+
+rm -r simv* csrc
+

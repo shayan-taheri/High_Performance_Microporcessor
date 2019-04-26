@@ -1,0 +1,9 @@
+vcs -R -I \
+	../src/hdl/tb/tb.v \
+	../src/hdl/gate/mac.vg \
+-v	../src/lib/verilog/core.v \
+	+libext+.v +nolibcell \
+	+define+VPD+SAIF+VCD+SDF
+
+rm -r simv* csrc
+
